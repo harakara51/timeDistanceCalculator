@@ -1,0 +1,38 @@
+﻿<div id="map"></div>
+<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDV55ofd6PA8zIVlGiP6Joh4FIS4DyLoXw&callback=initMap"
+        async defer></script>
+
+@*//<script src="https://maps.googleapis.com/maps/api/js"> </script>*@
+<div class="jumbotron">
+    <form id="distance_form">
+        <label>Origin: </label>
+        <input id="origin" type="text" name="origin" />
+        <br />
+        <label>Destination: </label>
+        <input id="destination" type="text" name="destination" />
+        <br />
+        <input type="submit" id="b1" value="Calculate" />
+    </form>
+    <div id="result">
+    </div>
+    
+</div>
+
+<div>
+    <div id="inputs" class="clearfix">
+        <input type="file" id="files" name="files[]" multiple />
+    </div>
+    <hr />
+    <output id="list"></output>
+    <hr />
+    <table id="contents" style="width:100%; height:400px;" border></table>
+</div>
